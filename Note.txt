@@ -1,0 +1,96 @@
+my set up
+1. Install nodejs
+2. npm install -g yarn ( if you use yarn)
+3. npm install -g live-server (to run : live-server foldername (ex: public which is created at step 4))
+4. Create a folder for the project and set up environment as follows:
+--create e public folder inside project amd in public create html files,in public create scripts folder and inside that 
+create my js(ex:app.js) files for compilation js files
+--create another folder (src) inside that create myjs real files that are too be compiled (ex:app.js)
+5.(inside html body-react and react dom cdn , myjs file )
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="/scripts/app.js"></script>
+6. npm init
+7. npm install babel-cli (to run babel from cli)
+8. npm i babel-preset-react babel--preset-env (install locally babel dependencies)
+9. babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch
+10. Extension --- babel es6/es7
+
+Update
+But it is better to install dependancies as local
+
+11.Install webpack -> npm i webpack
+for webpack
+    replace->
+    i)babel-preset-react > @babel/preset-react
+    ii)babel-preset-env > @babel/preset-env
+    
+    No need->
+    i)babel-cli
+    
+12. Config webpack and runscripts-> see file 12.1,12.2
+13. npm i react react-dom (as webpack will give support of them from now,so html file no need to inlude them by manual)
+14. npm i babel-core (to run babel from webpack) babel-loader (to have the ability for webpack to run babel )
+15. config babel in webpack with presets ,(have a .babelrc file in folder containing)
+    {
+    "presets": [
+        "@babel/preset-env",
+        "@babel/preset-react"
+    ]
+}
+16. npm i webpack-cli (to run yarn run build)
+
+17 .npm i webpack-dev-server  (this handle also live server)
+18. npm i babel-plugin-transform-class-properties (this pulgin make life easier with 'this' key binding and more ) example is shown in 
+    18.1 file,
+    for this pulgin , in .babelrc , these line should be added:
+    
+     "plugins": [
+        "transform-class-properties"
+    ]
+19. npm i react-modal (this modal is useful to pass childprops) docs are here->
+    https://github.com/reactjs/react-modal
+    
+20. npm i css-loader --save-dev (The css-loader interprets @import and url() like import/require() and will resolve them.)
+21. npm i style-loader --save-dev (Inject CSS into the DOM)
+->for these two loader webpack rule has to config as
+     rules: [
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
+ 22. npm i sass-loader --save-dev (scss and sass loader),
+    for that in webpack rules-
+    rules: [
+      {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader','sass-loader'],
+      },
+    ],
+    
+ 23. npm  i node-sass --save-dev (scss and sass converter to css)
+ 
+ --> so the common config for css and scss is->
+ 
+ rules: [
+      {
+        test: /\.s?css$/,
+        use: ['style-loader', 'css-loader','sass-loader'],
+      },
+    ],
+
+24. npm i normalize.css --save-dev (to make all browser same css default)
+
+25.npm i react-router-dom  (routing react app for single app application)
+26.npm i @babel/plugin-transform-runtime --save-dev  (async-await supports enabling -- in .babelrc
+    add--
+    "@babel/plugin-transform-runtime" in plugins
+    
+ 27. npm i redux ( easier state management accross react components )
+     read documentation -> https://redux.js.org/introduction/getting-started
+     
+ 28. npm i uuid (to generate random id in code)
+ 29 . npm i @babel/plugin-proposal-object-rest-spread (for object spreading ,ex: ...obj)
+    for this plugin in .babelrc>plugins
+    > @babel/plugin-proposal-object-rest-spread

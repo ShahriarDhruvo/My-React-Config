@@ -1,0 +1,25 @@
+{
+  "name": "indecision-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Shahriar Dhruvo",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --watch",
+    "server": "live-server public/"
+  },
+  "dependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.9.4",
+    "babel-loader": "^8.1.0",
+    "live-server": "^1.2.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "validator": "^13.0.0",
+    "webpack": "^4.43.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.11"
+  }
+}

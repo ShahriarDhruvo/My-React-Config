@@ -1,0 +1,25 @@
+React
+-----
+React is a JavaScript library (not a framework) that creates user interfaces (UIs) in a predictable and efficient way using declarative
+code. You can use it to help build single page applications and mobile apps, or to build complex apps if you utilise it with other 
+libraries.React and React-dom renders react component to the browser
+
+Jsx (Javascript XML)
+---
+JSX is a way to write JS objects in way that looks like HTML*. It is easier to write a thing that looks like the thing you are trying to 
+define rather than writing wierd JS that you have to mentally translate into the thing you want it to be.All you’re doing is writing out 
+an object, but the JSX parser converts HTML tags into react elements. You are not required to use JSX, but JSX makes it 
+easier to write React applications.
+
+
+Babel
+-----
+React doesn't "need" babel or webpack . Babel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards 
+compatible version of JavaScript in current and older browsers or environments. Here are the main things Babel can do for you: 
+Transform syntax.(from ES* to ES5 , from JSX to ES5 etc)
+
+Webpack
+-------
+Webpack is a static module bundler for JavaScript applications — it takes all the code from your application and makes it usable in
+a web browser. ... When Webpack processes your application, it builds a dependency graph which maps out the modules that your project
+needs and generates one or more bundles
