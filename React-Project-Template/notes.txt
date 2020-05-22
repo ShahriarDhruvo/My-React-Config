@@ -1,0 +1,4 @@
+Run these commands to get started:
+
+	1.yarn init (To set up all the necessary initialization)
+	2.yarn install (To install all the dependencies in package.json file)
